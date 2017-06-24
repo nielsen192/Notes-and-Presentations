@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Data Fun</title>
+<meta name="author" content="(Thomas V. Nielsen)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/tnielsen/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/tnielsen/reveal.js/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home/tnielsen/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Data Fun</h1><h2 class="author">Thomas V. Nielsen</h2><p class="date">Created: 2017-06-24 lør 23:59</p>
+</section>
+
+<section>
+<section id="slide-org69bde32">
+<h2 id="org69bde32"><span class="section-number-2">1</span> Data Science</h2>
+<ul>
+<li>Research vs Production</li>
+<li>Siraj</li>
+<li>Python Packages</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb7e4e79">
+<h2 id="orgb7e4e79"><span class="section-number-2">2</span> Scikit-learn</h2>
+<ul>
+<li>Built on NumPy, SciPy, Matplotlib</li>
+<li>Preprocessing</li>
+<li>Supervised
+<ul>
+<li>Classification, Regression</li>
+
+</ul></li>
+<li>Unsupervised
+<ul>
+<li>Clustering, Dimensionality reduction, Model selection</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga2f6244">
+<h2 id="orga2f6244"><span class="section-number-2">3</span> Tensorflow</h2>
+<ul>
+<li>Google Open-Source Library</li>
+<li>Using data flow graphs</li>
+<li>Great tutorials and support</li>
+<li>Great functionality for making ANNs</li>
+<li>Tensorboard and TFLearn</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org96a35bb">
+<h2 id="org96a35bb"><span class="section-number-2">4</span> Keras</h2>
+<ul>
+<li>High-level neural network api</li>
+<li>Using tensorflow or theano</li>
+<li>Focus on fast experimentation</li>
+<li>Supports convolutional, recurrent and hybrids</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgabde272">
+<h2 id="orgabde272"><span class="section-number-2">5</span> Neat-Python</h2>
+<ul>
+<li>NEAT implementation</li>
+<li>Pure python</li>
+<li>Easy setup (config)</li>
+<li>Support for HyperNEAT planned for later</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org172b1d3">
+<h2 id="org172b1d3"><span class="section-number-2">6</span> PEAS</h2>
+<ul>
+<li>HyperNEAT implementation</li>
+<li>NEAT capable</li>
+<li>Pure python</li>
+<li>Numpy dependency</li>
+<li>Easy experimentation focus</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org708cb8f">
+<h2 id="org708cb8f"><span class="section-number-2">7</span> Links</h2>
+<ul>
+<li><a href="http://scikit-learn.org/stable/">Scikit-learn</a></li>
+<li><a href="https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A">Siraj Raval</a></li>
+<li><a href="https://www.tensorflow.org/">Tensorflow</a></li>
+<li><a href="https://keras.io/">Keras</a></li>
+<li><a href="https://neat-python.readthedocs.io/en/latest/">Neat-Python</a></li>
+<li><a href="https://github.com/noio/peas">PEAS</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///home/tnielsen/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///home/tnielsen/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///home/tnielsen/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///home/tnielsen/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/tnielsen/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/tnielsen/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/tnielsen/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

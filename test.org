@@ -1,0 +1,50 @@
+#+TITLE: Data Fun
+#+AUTHOR: Thomas V. Nielsen
+#+OPTIONS: toc:nil
+
+* Data Science
+- Research vs Production
+- Siraj
+- Python Packages
+
+* Scikit-learn
+- Built on NumPy, SciPy, Matplotlib
+- Preprocessing
+- Supervised
+  - Classification, Regression
+- Unsupervised
+  - Clustering, Dimensionality reduction, Model selection
+
+* Tensorflow
+- Google Open-Source Library
+- Using data flow graphs
+- Great tutorials and support
+- Great functionality for making ANNs
+- Tensorboard and TFLearn
+
+* Keras
+- High-level neural network api
+- Using tensorflow or theano
+- Focus on fast experimentation
+- Supports convolutional, recurrent and hybrids
+
+* Neat-Python
+- NEAT implementation
+- Pure python
+- Easy setup (config)
+- Support for HyperNEAT planned for later
+
+* PEAS
+- HyperNEAT implementation
+- NEAT capable
+- Pure python
+- Numpy dependency
+- Easy experimentation focus
+
+* Links
+- [[http://scikit-learn.org/stable/][Scikit-learn]]
+- [[https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A][Siraj Raval]]
+- [[https://www.tensorflow.org/][Tensorflow]]
+- [[https://keras.io/][Keras]]
+- [[https://neat-python.readthedocs.io/en/latest/][Neat-Python]]
+- [[https://github.com/noio/peas][PEAS]]
