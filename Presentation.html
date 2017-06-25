@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Python: Beauty &amp; Chaos</title>
+<meta name="author" content="(Thomas Vest Nielsen)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///c:/reveal.js-master/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///c:/reveal.js-master/css/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///c:/reveal.js-master/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Python: Beauty &amp; Chaos</h1><h2 class="author">Thomas Vest Nielsen</h2><p class="date">Created: 2017-06-21 on 22:43</p>
+</section>
+
+
+
+<section>
+<section id="slide-org8d74b51">
+<h2 id="org8d74b51"><span class="section-number-2">1</span> Hvorfor??</h2>
+<ul>
+<li>Kraftfuldt</li>
+<li>Multi-paradigme</li>
+<li>Interpreted</li>
+<li>Populært</li>
+<li>Pseudocode?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org26063f2">
+<h2 id="org26063f2"><span class="section-number-2">2</span> Udviklingsmiljø</h2>
+<ul>
+<li>Stort set alle systemer</li>
+<li>IDE (PyCharm, VS, Eclipse)</li>
+<li>Editor (Emacs, Sublime Text, Atom, VS Code)</li>
+<li>På næsten alle unix systemer som standard</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf5cec8f">
+<h2 id="orgf5cec8f"><span class="section-number-2">3</span> Basic Syntax</h2>
+<ul>
+<li>import = Using</li>
+<li>print = Console.WriteLine</li>
+<li>input</li>
+<li>Variabler == type svage</li>
+<li>Standard aritmetik = +, -, <b>, /, %, *</b>, //</li>
+
+</ul>
+
+
+</section>
+<section id="slide-orgdbcbd6f">
+<h3 id="orgdbcbd6f"><span class="section-number-3">3.1</span> Syntax Fortsat</h3>
+<ul>
+<li>Kommentarer</li>
+<li>Multi-line</li>
+<li>Embedding strings i outputs = %s</li>
+<li>Printe en string flere gange? Ja da</li>
+
+</ul>
+
+</section>
+<section id="slide-orge80326d">
+<h3 id="orge80326d"><span class="section-number-3">3.2</span> Lister</h3>
+<ul>
+<li>[]</li>
+<li>type fri</li>
+<li>append, insert, remove, del</li>
+<li>sort, reverse</li>
+<li>Kombinér lister</li>
+<li>len, max, min</li>
+
+</ul>
+
+</section>
+<section id="slide-org9e956cf">
+<h3 id="org9e956cf"><span class="section-number-3">3.3</span> Tuples</h3>
+<ul>
+<li>Værdier kan ikke ændres</li>
+<li>Kan konvertere til liste</li>
+<li>Konvertér liste til tuple</li>
+
+</ul>
+
+</section>
+<section id="slide-org1570d17">
+<h3 id="org1570d17"><span class="section-number-3">3.4</span> Dictionary/Map</h3>
+<ul>
+<li>key:value pair</li>
+<li>{}</li>
+<li>.keys, .values</li>
+
+</ul>
+
+</section>
+<section id="slide-orgcfbbe1c">
+<h3 id="orgcfbbe1c"><span class="section-number-3">3.5</span> Conditionals</h3>
+<ul>
+<li>if</li>
+<li>for (i datasæt eller range)</li>
+<li>while</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org17ccd16">
+<h2 id="org17ccd16"><span class="section-number-2">4</span> Hvad med mine klasser??</h2>
+<ul>
+<li>Funktioner</li>
+<li>Klasser</li>
+<li>Properties</li>
+<li>Constructors</li>
+<li>classmethod &amp; staticmethod</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org859771f">
+<h2 id="org859771f"><span class="section-number-2">5</span> Filer?</h2>
+<ul>
+<li>open("file.txt", "wb")</li>
+<li>write(bytes("blabla", 'UTF-8'))</li>
+<li>close()</li>
+<li>reading and writing == open("test.txt", "r+")</li>
+<li>read()</li>
+<li>os.remove()</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org34a06c1">
+<h2 id="org34a06c1"><span class="section-number-2">6</span> Eksempler</h2>
+<ul>
+<li>Det er vist på tide!</li>
+
+</ul>
+
+</section>
+<section id="slide-orgacd9025">
+<h3 id="orgacd9025"><span class="section-number-3">6.1</span> Basics</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"><span style="color: #4f97d7; font-weight: bold;">import</span> random, string
+
+<span style="color: #7590db;">vowels</span>=<span style="color: #2d9574;">'aeiouy'</span>
+<span style="color: #7590db;">consonants</span>=<span style="color: #2d9574;">'bcdfghjklmnpqrstvwxz'</span>
+<span style="color: #7590db;">letters</span>=string.ascii_lowercase
+
+<span style="color: #7590db;">letter_input_1</span>=<span style="color: #4f97d7;">input</span><span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"What letter do you want? Enter 'v' for vowels, 'c' for consonants, 'l' for any letter: "</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">generator</span><span style="color: #4f97d7;">()</span>:
+    <span style="color: #4f97d7; font-weight: bold;">if</span> letter_input_1==<span style="color: #2d9574;">'v'</span>:
+        <span style="color: #7590db;">letter1</span>=random.choice<span style="color: #4f97d7;">(</span>vowels<span style="color: #4f97d7;">)</span>
+    <span style="color: #4f97d7; font-weight: bold;">elif</span> letter_input_1==<span style="color: #2d9574;">'c'</span>:
+        <span style="color: #7590db;">letter1</span>=random.choice<span style="color: #4f97d7;">(</span>consonants<span style="color: #4f97d7;">)</span>
+    <span style="color: #4f97d7; font-weight: bold;">elif</span> letter_input_1==<span style="color: #2d9574;">'l'</span>:
+        <span style="color: #7590db;">letter1</span>=random.choice<span style="color: #4f97d7;">(</span>letters<span style="color: #4f97d7;">)</span>
+    <span style="color: #4f97d7; font-weight: bold;">else</span>:
+        <span style="color: #7590db;">letter1</span>=letter_input_1
+
+    ...
+    <span style="color: #7590db;">name</span>=letter1+letter2+letter3
+    <span style="color: #4f97d7; font-weight: bold;">return</span><span style="color: #4f97d7;">(</span>name<span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7; font-weight: bold;">for</span> i <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">20</span><span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">print</span><span style="color: #4f97d7;">(</span>generator<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>
+
+</pre>
+</div>
+
+</section>
+<section id="slide-org2a3f013">
+<h3 id="org2a3f013"><span class="section-number-3">6.2</span> Klasse</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Animal</span>:
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">None signifies the lack of a value</span>
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">You can make a variable private by starting it with __</span>
+    <span style="color: #7590db;">__name</span> = <span style="color: #a45bad;">None</span>
+    <span style="color: #7590db;">__height</span> = <span style="color: #a45bad;">None</span>
+    <span style="color: #7590db;">__weight</span> = <span style="color: #a45bad;">None</span>
+    <span style="color: #7590db;">__sound</span> = <span style="color: #a45bad;">None</span>
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">The constructor is called to set up or initialize an object</span>
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">self allows an object to refer to itself inside of the class</span>
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">__init__</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, name, height, weight, sound<span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__name = name
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__height = height
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__weight = weight
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__sound = sound
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">set_name</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, name<span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__name = name
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">get_name</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #4f97d7; font-weight: bold;">self</span>.__name
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">toString</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">"{} is {} cm tall and {} kilograms and says {}"</span>.<span style="color: #4f97d7;">format</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>.__name, <span style="color: #4f97d7; font-weight: bold;">self</span>.__height, <span style="color: #4f97d7; font-weight: bold;">self</span>.__weight, <span style="color: #4f97d7; font-weight: bold;">self</span>.__sound<span style="color: #4f97d7;">)</span>
+
+</pre>
+</div>
+
+</section>
+<section id="slide-org3b2b04a">
+<h3 id="org3b2b04a"><span class="section-number-3">6.3</span> Inheritance</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Dog</span><span style="color: #4f97d7;">(</span>Animal<span style="color: #4f97d7;">)</span>:
+    <span style="color: #7590db;">__owner</span> = <span style="color: #a45bad;">None</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">__init__</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, name, height, weight, sound, owner<span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__owner = owner
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__animal_type = <span style="color: #a45bad;">None</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">How to call the super class constructor</span>
+        <span style="color: #4f97d7;">super</span><span style="color: #4f97d7;">(</span>Dog, <span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>.__init__<span style="color: #4f97d7;">(</span>name, height, weight, sound<span style="color: #4f97d7;">)</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">set_owner</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, owner<span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.__owner = owner
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">We can overwrite functions in the super class</span>
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">toString</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">"{} is {} cm tall and {} kilograms and says {}. His owner is {}"</span>.<span style="color: #4f97d7;">format</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>.get_name<span style="color: #bc6ec5;">()</span>, <span style="color: #4f97d7; font-weight: bold;">self</span>.get_height<span style="color: #bc6ec5;">()</span>, <span style="color: #4f97d7; font-weight: bold;">self</span>.get_weight<span style="color: #bc6ec5;">()</span>, <span style="color: #4f97d7; font-weight: bold;">self</span>.get_sound<span style="color: #bc6ec5;">()</span>, <span style="color: #4f97d7; font-weight: bold;">self</span>.__owner<span style="color: #4f97d7;">)</span>
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">You don't have to require attributes to be sent</span>
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">This allows for method overloading</span>
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">multiple_sounds</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, how_many=<span style="color: #a45bad;">None</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #4f97d7; font-weight: bold;">if</span> how_many <span style="color: #4f97d7; font-weight: bold;">is</span> <span style="color: #a45bad;">None</span>:
+            <span style="color: #4f97d7; font-weight: bold;">print</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>.get_sound<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">else</span>:
+            <span style="color: #4f97d7; font-weight: bold;">print</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>.get_sound<span style="color: #bc6ec5;">()</span> * how_many<span style="color: #4f97d7;">)</span>
+
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org22fea3c">
+<h2 id="org22fea3c"><span class="section-number-2">7</span> Links</h2>
+<ul>
+<li><a href="http://www.newthinktank.com/2014/11/python-programming/">beginner cheat-sheet</a></li>
+<li><a href="https://stackoverflow.com/questions/12179271/meaning-of-classmethod-and-staticmethod-for-beginner">SO classmethod</a></li>
+<li><a href="https://github.com/zhiwehu/Python-programming-exercises/blob/master/100+%20Python%20challenging%20programming%20exercises.txt">Github exercises &amp; solutions</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org287df5a">
+<h2 id="org287df5a"><span class="section-number-2">8</span> Exercises Level 1</h2>
+<ul>
+<li>Question:Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.</li>
+<li>Question:
+Define a class which has at least two methods:
+getString: to get a string from console input
+printString: to print the string in upper case.
+Also please include simple test function to test the class methods.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org66da9a3">
+<h2 id="org66da9a3"><span class="section-number-2">9</span> Exercise Level 2</h2>
+<ul>
+<li>Question:</li>
+
+</ul>
+<p>
+Write a program that calculates and prints the value according to the given formula:
+Q = Square root of [(2 * C * D)/H]
+Following are the fixed values of C and H:
+C is 50. H is 30.
+D is the variable whose values should be input to your program in a comma-separated sequence.
+Example
+Let us assume the following comma separated input sequence is given to the program:
+100,150,180
+The output of the program should be:
+18,22,24
+</p>
+
+<p>
+Hints:
+If the output received is in decimal form, it should be rounded off to its nearest value (for example, if the output received is 26.0, it should be printed as 26)
+In case of input data being supplied to the question, it should be assumed to be a console input.
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc448439">
+<h2 id="orgc448439"><span class="section-number-2">10</span> Ideas??</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///c:/reveal.js-master/lib/js/head.min.js"></script>
+<script src="file:///c:/reveal.js-master/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///c:/reveal.js-master/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///c:/reveal.js-master/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///c:/reveal.js-master/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///c:/reveal.js-master/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///c:/reveal.js-master/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
